@@ -1,0 +1,11 @@
+{
+  "name": "ytshorts",
+  "version": "1.0.9",
+  "description": "A redesign of yt shorts & youtube",
+  "main": "./src/scripts/script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "CodeAdiksuu",
+  "license": "ISC"
+}

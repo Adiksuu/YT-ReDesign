@@ -1,0 +1,598 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Roboto', sans-serif;
+}
+#camera {
+    float: right;
+}
+.video__options {
+    float: right;
+}
+span {
+    font-size: 16px;
+    font-weight: 400;
+}
+#dislike, #comment, #survey__comment, #survey__dislike, #watchVideo__dislike {
+    transform: rotateY(180deg);
+}
+div#music {
+    float: right;
+    right: 36px;
+    bottom: 16px;
+    transition: .1s linear;
+    position: fixed;
+}
+.channel__options {
+    bottom: 16px;
+    align-items: center;
+}
+.video__info__shorts {
+    top: 75.5vh;
+    font-size: 20px;
+    font-weight: 400;
+}
+.video__info__shorts span {
+    font-weight: 800;
+}
+
+#like.like, #like:hover, #dislike.like, #dislike:hover, #watchVideo__like:hover, #watchVideo__like.like, #watchVideo__dislike:hover, #watchVideo__dislike.like {
+    color: var(--blue-500);
+}
+#music:hover {
+    filter: brightness(1.3);
+}
+.shorts {
+    height: 100vh;
+    overflow: hidden;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+.content.hide {
+    display: none;
+}
+#subscribe.subscribe {
+    background: #a7a7a710;
+    color: var(--gray-500);
+}
+#surveySub.subscribe {
+    color: var(--gray-500);
+}
+#subscribe {
+    width: 156px;
+}
+#filter {
+    float: right;
+}
+
+.comment__settings {
+    gap: 48px;
+    width: 100%;
+}
+.comment__settings #settings {
+    float: right;
+}
+.comments__comment {
+    height: 96px;
+}
+.comments__line {
+    height: 1px;
+}
+.video__comments, .comment__exit {
+    opacity: 0;
+    pointer-events: none;
+}
+.video__comments.show ,.comment__exit.show {
+    opacity: 1;
+    pointer-events: all;
+}
+.video__options {
+    top: 96px;
+}
+
+#shorts {
+    display: none;
+    pointer-events: none;
+}
+#shorts.show {
+    display: block;
+    pointer-events: all;
+}
+
+.yt__nav, .yt__subs__nav {
+    height: 72px;
+    z-index: 1;
+}
+.yt__nav__icons {
+    float: right;
+}
+.icons__left, .icons__right {
+    gap: 72px;
+}
+.icons__left, .icons__right, .icons__center {
+    cursor: pointer;
+}
+.yt__videos {
+    top: 72px;
+    flex-wrap: wrap;
+}
+#video__yt {
+    height: 225px;
+    object-fit: cover;
+}
+.yt__video__views {
+    bottom: 52px;
+}
+.yt__page {
+    height: 275vh;
+}
+
+.video__info {
+    margin-bottom: 10px;
+    background: #ffffff15;
+    border-radius: 0 0 20px 20px;
+    width: calc(100% - 15px);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    padding-top: 8px;
+    height: 72px;
+}
+.video__time {
+    float: right;
+    bottom: 30px;
+    right: 10px;
+    width: 54px;
+    padding: 4px 0;
+    border-radius: 9999px;
+    background: #000000b0;
+}
+.yt__page.hide, .yt__page.hide {
+    display: none;
+    pointer-events: none;
+}
+.yt__nav div#search__nav {
+    display: none;
+}
+.yt__nav div input {
+    padding: 0px 16px;
+    border-radius: 9999px 0 0 9999px;
+}
+.yt__nav div button {
+    border-radius: 0 9999px 9999px 0;
+    width: 64px;
+    border-left: 0;
+    background: var(--black-900);
+    cursor: pointer;
+}
+.subs__page {
+    display: none;
+    pointer-events: none;
+}
+.subs__page.show {
+    display: block;
+    pointer-events: all;
+}
+.yt__subs__nav__icons{
+    float:right;
+}
+.yt__subs__nav i {
+    cursor: pointer;
+}
+.yt__subs__sub {
+    display: none;
+    pointer-events: none;
+}
+#channel__1.show, #channel__2.show, #channel__3.show, #channel__4.show, #channel__5.show, #channel__6.show {
+    display: flex;
+    pointer-events: all;
+}
+.survey__bottom button {
+    text-align: left;
+    width: calc(100% - 36px);
+    cursor: pointer;
+}
+.survey__bottom button.select {
+    border: 1px solid var(--blue-500);
+    color: var(--blue-500);
+}
+.survey__per__1, .survey__per__2 {
+    opacity: 0;
+    pointer-events: none;
+}
+.survey__per__1.show, .survey__per__2.show {
+    opacity: 1;
+    pointer-events: all;
+}
+#survey__share {
+    right: 96px;
+}
+.survey__options i {
+    cursor:pointer;
+}
+.yt__subs__sub i {
+    color: var(--gray-500);
+    cursor: pointer;
+    font-size: 24px;
+    right: 16px;
+    position: absolute;
+    display: none;
+    pointer-events: none;
+}
+.yt__subs__list.manage i {
+    display: block;
+    pointer-events: all;
+}
+#survey__like.like, #survey__dislike.like {
+    color: var(--blue-500);
+}
+
+.yt__logging {
+    z-index: 1;
+}
+.sign__up__form input, .sign__in__form input {
+    padding: 0px 13px;
+}
+input {
+    outline: none;
+}
+
+input:placeholder-shown, input:focus, input::placeholder, input {
+    color: var(--gray-400);
+    font-size: 14px;
+    letter-spacing: .1px;
+}
+.sign__up__form div button:hover, .sign__in__form div button:hover {
+    background: var(--red-900);
+}
+.sign__up__bottom h1 a:hover, .sign__in__bottom h1 a:hover {
+    color: var(--red-900);
+}
+
+#logging__page, #sign__up__page, #sign__in__page {
+    display: none;
+    pointer-events: none;
+}
+#logging__page.show, #sign__up__page.show, #sign__in__page.show {
+    display: block;
+    pointer-events: all;
+}
+.yt__channel__manage {
+    z-index: 1;
+}
+/* .top__channel {
+    padding-bottom: 12px;    
+} */
+.channel__manage__options div p i {
+    width: 42px;
+    margin-left: 32px;
+}
+.channel__manage__options div p {
+    padding: 10px 0;
+    width: 100%;
+    cursor: pointer;
+}
+.channel__manage__options div p:hover {
+    background: #ffffff15;
+}
+.lines-div {
+    border-top: 1px solid var(--gray-700);
+    padding-top: 8px;
+}
+.yt__channel__manage {
+    display: none;
+    pointer-events: none;
+}
+.yt__channel__manage.show {
+    display: block;
+    pointer-events: all;
+}
+.watchVideo {
+    z-index: 1;
+}
+.watchVideo__controls {
+    gap: 7%;
+}
+.watchVideo__controls i {
+    cursor: pointer;
+}
+
+.watchVideo__channel button {
+    width: 178px;
+}
+.watchVideo__channel button.subscribe {
+    background: #ffffff15;
+}
+.watchVideo__channel {
+    padding: 14px 0;
+}
+
+.watchVideo {
+    display: none;
+    pointer-events: none;
+}
+.watchVideo.show {
+    display: block;
+    pointer-events: all;
+}
+#thisImg {
+    overflow: hidden;
+    height: 225px;
+    width: calc(100% - 15px);
+    border-radius: 20px 20px 0 0;
+    display: flex;
+    margin: auto;
+}
+#watch__yt {
+    object-fit: contain;
+}
+#video__yt:hover {
+    transform: scale(1.05);
+}
+.yt__surveys {
+    top: 76px;
+}
+.makeVideo__popup {
+    height: 296px;
+    border-radius: 25px 25px 0 0;
+}
+.makeVideo__popup__items div i {
+    line-height: 48px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+}
+.makeVideo__popup__items div {
+    padding: 10px 0;
+    cursor: pointer;
+}
+.makeVideo__popup__items div:hover {
+    background: #ffffff15;
+}
+.makeVideo {
+    z-index: 1;
+    display: none;
+    pointer-events: none;
+}
+.makeVideo.show {
+    display: block;
+    pointer-events: all;
+}
+.uploadVideo {
+    z-index: 1;
+    display: none;
+    pointer-events: none;
+}
+.uploadVideo.show {
+    display: block;
+    pointer-events: all;
+}
+.uploadVideo button {
+    padding: 8px 14px;
+    cursor: pointer;
+}
+.upload__video__preview {
+    height: 225px;
+}
+.upload__channel__info input {
+    font-size: 14px;
+    padding: 3px 10px;
+}
+.upload__title input:placeholder-shown, .upload__title input:focus, .upload__title input::placeholder, .upload__title input {
+    color: var(--gray-400);
+    font-size: 22px;
+    letter-spacing: .1px;
+}
+.upload__title input {
+    color: #fff;
+    width: calc(100% - 32px);
+}
+.upload__title p {
+    float: left;
+    text-align: left;
+}
+.upload__settings div {
+    padding: 10px 0;
+    cursor: pointer;
+}
+.upload__settings div i {
+    margin-right: 16px;
+    margin-left: 16px;
+}
+.upload__settings div:hover {
+    background: #ffffff15;
+}
+.upload__video__preview video {
+    height: 225px;
+    width: 100vw;
+}
+
+#hidden__video {
+    display: none;
+    pointer-events: none;
+}
+#hidden__video.uploaded {
+    display: block;
+    pointer-events: all
+}
+
+.channelDashboard {
+    z-index: 1;
+    height: 140vh;
+    display: none;
+}
+.channelDashboard.show {
+    display: block;
+}
+.dashboard__selection p {
+    padding: 5px 15px;
+    font-size: 18px;
+    color: #fff;
+    font-weight: 500;
+    border-bottom: 2px solid transparent;
+    border-radius: 10px 10px 0 0;
+}
+.dashboard__selection p:hover {
+    background: #ffffff15;
+}
+.dashboard__selection p.active {
+    border-bottom: 2px solid #fff;
+}
+.dashboard__selection{
+    overflow-y: auto;
+}
+.dashboard__selection::-webkit-scrollbar {
+    display: block;
+    height: 8px;
+}
+
+.dashboard__selection::-webkit-scrollbar-track {
+    border-radius: 10px;
+	box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+.dashboard__selection::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	background-color: var(--black-900);
+    transition: .2s linear;
+}
+.dashboard__selection::-webkit-scrollbar-thumb:hover {
+    background-color: var(--black-800);
+}
+.dashboard__banner, .banner {
+    top: 40px;
+}
+.dashboard__info img {
+    width: 72px;
+}
+.dashboard__buttons, .dashboard__buttons__user {
+    top: 96px;
+}
+.dashboard__buttons button, .dashboard__buttons__user button {
+    border: none;
+    padding: 5px 13px;
+    border-radius: 9999px;
+    background: var(--black-900);
+    height: 42px;
+    font-size: 16px;
+    color: var(--white-000);
+    cursor: pointer;
+}
+.dashboard__buttons button:hover, .dashboard__buttons__user button:hover {
+    background: var(--black-700);
+}
+#ytChannelVid {
+    display: none;
+}
+#ytChannelVid.show {
+    display: block;
+}
+.dashboard__buttons.show {
+    display: flex;
+}
+.dashboard__buttons__user.show {
+    display: flex;
+}
+.editChannelPage {
+    z-index: 1;
+}
+.avatar_banner {
+    height: 72px;
+    width: 72px;
+    bottom: 104px;
+    filter: brightness(.5);
+}
+.banner_avatar_camera {
+    bottom: 52px;
+}
+.options div p span i {
+    background: #ffffff15;
+    border-radius: 9999px;
+    padding: 12px;
+    bottom: 14px;
+    position: relative;
+}
+.editOptions__box {
+    height: 96px;
+    display: none;
+}
+.editOptions__box.show {
+    display: flex;
+}
+.editOptions__box div input {
+    padding: 4px;
+    background: #ffffff15;
+    border-radius: 10px 0 0 10px;
+    height: 32px;
+}
+.editOptions__box div button {
+    background: #ffffff15;
+    border: none;
+    height: 32px;
+    border-radius: 0 10px 10px 0;
+    width: 24px;
+    color: #fff;
+    cursor: pointer;
+}
+.editOptions__box div button:hover {
+    background: #b8b8b815;
+}
+.editChannelPage {
+    display: none;
+}
+.editChannelPage.show {
+    display: block;
+}
+.yt__downmenu {
+    width: calc(100% - 15px);
+    margin: auto;
+    left: 0;
+    right: 0;
+    border-radius: 10px;
+    background: #a1a1a1de;
+    box-shadow: 0px 0px 6px 0px #0f0f0f85;
+}
+lord-icon {
+    cursor: pointer;
+    top: 4px;
+    position: relative;
+}
+
+@media screen and (min-width: 812px) {
+    .yt__nav div#search__nav {
+        display: flex;
+    }
+    .yt__videos {
+        display: flex;
+    }
+    .yt__video #thisImg {
+        height: 180px;
+    }
+    .yt__video .video__info p, .video__info div span{
+        width: 180px;
+        font-size: 12px;
+    }
+    .dashboard__banner, .banner {
+        height: 220px;
+    }
+    .avatar_banner {
+        bottom: 140px;
+    }
+    .banner_avatar_camera {
+        bottom: 87px;
+    }
+    .yt__video {
+        flex: 1 0 25%;
+        flex-wrap: wrap;
+        max-width: 50%;
+    }
+    .dashboard__banner img, .banner img {
+        object-fit: contain;
+    }
+}

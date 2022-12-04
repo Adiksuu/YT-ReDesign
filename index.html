@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Custom YouTube Re-Design</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+		<link rel="stylesheet" href="./src/assets/css/template/style.css" />
+		<link rel="stylesheet" href="./src/assets/css/design/style.css" />
+		<script src="https://cdn.lordicon.com/fudrjiwc.js"></script>
+	</head>
+	<body onload="startSignUp();">
+		<section class="yt__page w-10-10 bc-black-400" id="ytPage">
+			<div class="content">
+				<div class="yt__nav w-10-10 bc-black-400 d-flex flex-row m-auto align-items text-align gap-4 bs-solid bw-2 bt-red-400 bp-top-hide bp-left-hide bp-right-hide p-fixed top-0">
+					<img src="https://www.iconpacks.net/icons/2/free-youtube-logo-icon-2431-thumb.png" alt="" class="h-48 ml-16">
+					<h1>YouTube</h1>
+					<div class="w-10-10 d-flex m-auto p-fixed justify-content left-0 right-0 flex-row" id="search__nav">
+						<input type="text" autocomplete="off" placeholder="Szukaj" class="bc-transparent p-relative bs-solid bw-1 bt-gray-000 w-4-10 h-40 br-all-full">
+						<button class="h-40 w-32 fs-18 fc-white-000 bc-transparent p-relative bw-1 bs-solid bt-gray-000"><i class="fas fa-search"></i></button>
+					</div>
+					<div class="yt__nav__icons d-flex m-auto align-items text-align p-absolute right-16 gap-16 fs-20 fc-white-000">
+						<i class="fas fa-tv"></i>
+						<i class="fas fa-bell"></i>
+						<i class="fas fa-search"></i>
+						<img src="https://avatars.githubusercontent.com/u/75419729?v=4" alt="" id="account" class="br-all-full h-48 cursor-pointer">
+					</div>
+				</div>
+				<div class="yt__videos p-relative mt-8">
+					<div class="yt__video h-auto w-10-10" id="hidden__video">
+						<div id="thisImg">
+							<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/A_black_image.jpg/320px-A_black_image.jpg" alt="" class="w-10-10 cursor-pointer" id="video__yt" onclick="changeVideo__4();">
+						</div>
+						<div class="video__time bc-black-100 br-all-2 w-36 fc-white-000 d-flex align-items justify-content p-relative">
+							<p id="uploadedVideo__time">NaN</p>
+						</div>
+						<div class="video__info w-10-10 h-64 mt-16">
+							<img src="https://avatars.githubusercontent.com/u/75419729?v=4" id="uploadedVideo__avatar" onclick="channelOpen__4();" alt="" class="h-56 br-all-full ml-16 cursor-pointer">
+							<div><span class="fs-16 fw-600 fc-white-000 p-relative d-flex m-auto ml-16 left-64 bottom-56" id="uploadedVideo__title">NaN</span></div>
+							<div class="yt__video__views p-relative ml-16 left-64"><p class="fs-14 fw-500 fc-gray-700" id="uploadedVideo__views">NaN &#8226; 0 wyświetleń &#8226; NaN</p></div>
+						</div>
+					</div>
+
+					<div class="yt__video h-auto w-10-10">
+						<div id="thisImg">
+							<img src="./src/assets/images/video__3.png" alt="" class="w-10-10 cursor-pointer" id="video__yt" onclick="changeVideo__1();">
+						</div>
+						<div class="video__time bc-black-100 br-all-2 w-36 fc-white-000 d-flex align-items justify-content p-relative">
+							<p>3:00</p>
+						</div>
+						<div class="video__info w-10-10 h-64 mt-16">
+							<img src="https://avatars.githubusercontent.com/u/75419729?v=4" alt="" onclick="channelOpen__1();" class="h-56 br-all-full ml-16 cursor-pointer">
+							<div><span class="fs-16 fw-600 fc-white-000 p-relative d-flex m-auto ml-16 left-64 bottom-56">Natura w 2022</span></div>
+							<div class="yt__video__views p-relative ml-16 left-64"><p class="fs-14 fw-500 fc-gray-700">Karol &#8226; 72 wyświetleń &#8226; 2 dni temu</p></div>
+						</div>
+					</div>
+
+					<div class="yt__video h-auto w-10-10">
+						<div id="thisImg">
+							<img src="./src/assets/images/video__2.png" alt="" class="w-10-10 cursor-pointer" id="video__yt" onclick="changeVideo__2();">
+						</div>
+						<div class="video__time bc-black-100 br-all-2 w-36 fc-white-000 d-flex align-items justify-content p-relative">
+							<p>0:14</p>
+						</div>
+						<div class="video__info w-10-10 h-64 mt-16">
+							<img src="https://avatars.githubusercontent.com/u/502342798?v=1" alt="" onclick="channelOpen__2();" class="h-56 br-all-full ml-16 cursor-pointer">
+							<div><span class="fs-16 fw-600 fc-white-000 p-relative d-flex m-auto ml-16 left-64 bottom-56">Wielkanoc w 2023 to będzie HIT!</span></div>
+							<div class="yt__video__views p-relative ml-16 left-64"><p class="fs-14 fw-500 fc-gray-700">Mateusz &#8226; 380 wyświetleń &#8226; 4 tyg. temu</p></div>
+						</div>
+					</div>
+					
+					<div class="yt__video h-auto w-10-10">
+						<div id="thisImg">
+							<img src="./src/assets/images/video__1.png" alt="" class="w-10-10 cursor-pointer" id="video__yt" onclick="changeVideo__3();">
+						</div>
+						<div class="video__time bc-black-100 br-all-2 w-36 fc-white-000 d-flex align-items justify-content p-relative">
+							<p>0:20</p>
+						</div>
+						<div class="video__info w-10-10 h-64 mt-16">
+							<img src="https://avatars.githubusercontent.com/u/75217728?v=1" alt="" onclick="channelOpen__3();" class="h-56 br-all-full ml-16 cursor-pointer">
+							<div><span class="fs-16 fw-600 fc-white-000 p-relative d-flex m-auto ml-16 left-64 bottom-56">Piękne miasto świata</span></div>
+							<div class="yt__video__views p-relative ml-16 left-64"><p class="fs-14 fw-500 fc-gray-700">Marcin &#8226; 612 wyświetleń &#8226; dzisiaj</p></div>
+						</div>
+					</div>
+
+					
+					
+				</div>
+
+				<div class="yt__surveys h-auto w-10-10 p-relative top-128 bw-4 bs-solid bt-gray-000 bp-bottom-hide bp-left-hide bp-right-hide">
+					<div class="survey__top ml-16 mt-16">
+						<img src="https://avatars.githubusercontent.com/u/75217728?v=1" alt="" onclick="channelOpen__3();" class="h-56 br-all-full cursor-pointer">
+						<div><span class="fs-16 fw-600 fc-white-000 p-relative d-flex m-auto ml-16 left-64 bottom-56">Marcin &#8226; <button id="surveySub" class="bw-0 bc-transparent fs-16 fw-500 fc-red-400 ml-4 cursor-pointer">SUBSKRYBUJ</button></span></div>
+						<div class="survey__time p-relative fs-14 fw-500 fc-gray-700 left-64 ml-16 bottom-48"><p>2 dni temu</p></div>
+					</div>
+					<div class="survey__middle p-relative ml-16 fs-18 fw-400 fc-white-000 bottom-24">
+						<p>Wkrótce nowy film!</p>
+					</div>
+					<div class="survey__bottom d-flex w-10-10 gap-8 justify-content align-items">
+						<div class="d-flex flex-col w-10-10 gap-8 justify-content align-items">
+							<button id="survey__button__1" class="bw-1 bt-gray-700 bs-solid h-40 br-all-4 bc-transparent fc-gray-700"><span class="fs-14 ml-16">SZTOS</span> <span id="survey__percent__1" class="survey__per__1 fs-14 p-absolute right-32">50%</span></button>
+							<button id="survey__button__2" class="bw-1 bt-gray-700 bs-solid h-40 br-all-4 bc-transparent fc-gray-700"><span class="fs-14 ml-16">ROBI WRAŻENIE</span> <span id="survey__percent__2" class="survey__per__2 fs-14 p-absolute right-32">50%</span></button>
+						</div>
+					</div>
+					<div class="survey__votes ml-24 p-relative top-16 fs-16 fw-400 fc-gray-700">
+						<p id="votes">1 głos</p>
+					</div>
+					<div class="survey__options p-relative top-48 fs-20 fc-white-000 d-flex gap-4 flex-row ml-24">
+						<i class="fas fa-thumbs-up" id="survey__like"></i>
+						<span class="mr-20" id="survey__likes">0</span>
+						<i class="fas fa-thumbs-down" id="survey__dislike"></i>
+						<i class="fas fa-share p-absolute" id="survey__share"></i>
+						<i class="fas fa-comment p-absolute right-48" id="survey__comment"></i>
+						<span class="p-absolute right-32">0</span>
+					</div>
+				</div>
+
+				<div class="yt__downmenu w-10-10 p-fixed bottom-0 bc-black-400 h-64 bw-0 bottom-16">
+					<div class="yt__downmenu__icons d-flex m-auto justify-content align-items text-align flex-row gap-24">
+						<div class="icons__left fs-24 fc-white-000 d-flex m-auto justify-content align-items text-align">
+							<lord-icon
+								id="home__refresh"
+								src="https://cdn.lordicon.com/gmzxduhd.json"
+								trigger="hover"
+								colors="primary:#fff,secondary:#c71f16"
+								style="width:56px;height:56px">
+							</lord-icon>
+							<lord-icon
+								id="shorts__mode"
+								src="https://cdn.lordicon.com/nocovwne.json"
+								trigger="hover"
+								colors="primary:#ffffff,secondary:#c71f16"
+								style="width:56px;height:56px">
+							</lord-icon>
+						</div>
+						<div class="icons__center fs-42 fc-white-000 d-flex m-auto justify-content align-items text-align gap-16">
+							<lord-icon
+								onclick="openPopup();"
+								src="https://cdn.lordicon.com/mecwbjnp.json"
+								trigger="hover"
+								colors="primary:#ffffff,secondary:#c71f16"
+								style="width:56px;height:56px">
+							</lord-icon>
+						</div>
+						<div class="icons__right fs-24 fc-white-000 d-flex m-auto justify-content align-items text-align">
+							<lord-icon
+								id="subs__mode"
+								src="https://cdn.lordicon.com/dxjqoygy.json"
+								trigger="hover"
+								colors="primary:#ffffff,secondary:#c71f16"
+								state="hover-looking-around"
+								style="width:56px;height:56px">
+							</lord-icon>
+							<lord-icon
+								src="https://cdn.lordicon.com/jvucoldz.json"
+								trigger="hover"
+								colors="primary:#ffffff,secondary:#c71f16"
+								style="width:56px;height:56px">
+							</lord-icon>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="subs__page bc-black-400 w-10-10 h-100vh" id="subs__page">
+			<div class="content">
+				<div class="yt__subs__nav d-flex flex-row gap-16 fc-white-000 fw-600 align-items text-align m-auto fs-20 w-10-10 bw-2 bs-solid bt-red-400 bp-top-hide bp-left-hide bp-right-hide">
+					<i class="fas fa-arrow-left ml-16 mr-12" id="backToYt"></i>
+					<p>Wszystkie subskrybcje</p>
+					<div class="yt__subs__nav__icons d-flex gap-32 p-absolute right-16">
+						<i class="fas fa-tv"></i>
+						<i class="fas fa-search"></i>
+						<i class="fas fa-ellipsis-v"></i>
+					</div>
+				</div>
+				<div class="yt__subs__settings d-flex m-auto align-items text-align fc-white-000 fw-600 p-relative top-20">
+					<div class="yt__subs__settings__left p-absolute left-16">
+						<p class="cursor-pointer">A-Z <i class="fas fa-chevron-down"></i></p>
+					</div>
+					<div class="yt__subs__settings__right fc-blue-400 p-absolute right-16">
+						<p class="cursor-pointer" id="manage__subs">ZARZĄDZAJ</p>
+					</div>
+				</div>
+				<div class="yt__subs__list p-relative top-64">
+					<div class="yt__subs__sub d-flex flex-row gap-16 fc-white-000 fw-600 align-items text-align m-auto mb-16" id="channel__1">
+						<img src="https://avatars.githubusercontent.com/u/26342798?v=1" alt="" class="h-48 br-all-full ml-16">
+						<p>Bartek</p>
+						<i class="fas fa-times" id="subs__del__6"></i>
+					</div>
+					<div class="yt__subs__sub d-flex flex-row gap-16 fc-white-000 fw-600 align-items text-align m-auto mb-16" id="channel__2">
+						<img src="https://avatars.githubusercontent.com/u/75217728?v=1" alt="" class="h-48 br-all-full ml-16">
+						<p>Marcin</p>
+						<i class="fas fa-times" id="subs__del__2"></i>
+					</div>
+					<div class="yt__subs__sub d-flex flex-row gap-16 fc-white-000 fw-600 align-items text-align m-auto mb-16" id="channel__3">
+						<img src="https://avatars.githubusercontent.com/u/502342798?v=1" alt="" class="h-48 br-all-full ml-16">
+						<p>Mateusz</p>
+						<i class="fas fa-times" id="subs__del__5"></i>
+					</div>
+					<div class="yt__subs__sub d-flex flex-row gap-16 fc-white-000 fw-600 align-items text-align m-auto mb-16" id="channel__4">
+						<img src="https://avatars.githubusercontent.com/u/75215728?v=1" alt="" class="h-48 br-all-full ml-16">
+						<p>Fabian</p>
+						<i class="fas fa-times" id="subs__del__3"></i>
+					</div>
+					<div class="yt__subs__sub d-flex flex-row gap-16 fc-white-000 fw-600 align-items text-align m-auto mb-16" id="channel__5">
+						<img src="https://avatars.githubusercontent.com/u/11215728?v=1" alt="" class="h-48 br-all-full ml-16">
+						<p>Robert</p>
+						<i class="fas fa-times" id="subs__del__4"></i>
+					</div>
+					<div class="yt__subs__sub d-flex flex-row gap-16 fc-white-000 fw-600 align-items text-align m-auto mb-16" id="channel__6">
+						<img src="https://avatars.githubusercontent.com/u/75419729?v=4" alt="" class="h-48 br-all-full ml-16">
+						<p>Karol</p>
+						<i class="fas fa-times" id="subs__del__1"></i>
+					</div>
+				</div>
+				<div class="yt__downmenu w-10-10 p-fixed bottom-0 bc-black-400 h-64 bw-0 bottom-16">
+					<div class="yt__downmenu__icons d-flex m-auto justify-content align-items text-align flex-row gap-24">
+						<div class="icons__left fs-24 fc-white-000 d-flex m-auto justify-content align-items text-align">
+							<lord-icon
+								id="home__mode"
+								src="https://cdn.lordicon.com/gmzxduhd.json"
+								trigger="hover"
+								colors="primary:#fff,secondary:#c71f16"
+								style="width:56px;height:56px">
+							</lord-icon>
+							<lord-icon
+								id="subs__shorts__mode"
+								src="https://cdn.lordicon.com/nocovwne.json"
+								trigger="hover"
+								colors="primary:#ffffff,secondary:#c71f16"
+								style="width:56px;height:56px">
+							</lord-icon>
+						</div>
+						<div class="icons__center fs-42 fc-white-000 d-flex m-auto justify-content align-items text-align gap-16">
+							<lord-icon
+								onclick="openPopup();"
+								src="https://cdn.lordicon.com/mecwbjnp.json"
+								trigger="hover"
+								colors="primary:#ffffff,secondary:#c71f16"
+								style="width:56px;height:56px">
+							</lord-icon>
+						</div>
+						<div class="icons__right fs-24 fc-white-000 d-flex m-auto justify-content align-items text-align">
+							<lord-icon
+								id="subs__mode"
+								src="https://cdn.lordicon.com/dxjqoygy.json"
+								trigger="hover"
+								colors="primary:#ffffff,secondary:#c71f16"
+								state="hover-looking-around"
+								style="width:56px;height:56px">
+							</lord-icon>
+							<lord-icon
+								src="https://cdn.lordicon.com/jvucoldz.json"
+								trigger="hover"
+								colors="primary:#ffffff,secondary:#c71f16"
+								style="width:56px;height:56px">
+							</lord-icon>
+						</div>
+					</div>
+				</div>
+				<!-- <div class="yt__downmenu w-10-10 p-fixed bottom-0 bc-black-400 h-64 bw-2 bs-solid bt-red-400 bp-bottom-hide bp-left-hide bp-right-hide">
+					<div class="yt__downmenu__icons d-flex m-auto justify-content align-items text-align flex-row gap-24">
+						<div class="icons__left fs-24 fc-white-000 d-flex m-auto justify-content align-items text-align">
+							<i class="fas fa-home" id="home__mode"></i>
+							<i class="fas fa-file-video" id="subs__shorts__mode"></i>
+						</div>
+						<div class="icons__center fs-42 fc-white-000 d-flex m-auto justify-content align-items text-align gap-16">
+							<i class="fas fa-plus-circle"></i>
+						</div>
+						<div class="icons__right fs-24 fc-white-000 d-flex m-auto justify-content align-items text-align">
+							<i class="fas fa-archive"></i>
+							<i class="fas fa-photo-video"></i>
+						</div>
+					</div>
+				</div> -->
+			</div>
+		</section>
+
+		<section class="shorts w-10-10 bc-black-400" id="shorts">
+			<div class="content">
+				<div class="menu__options fc-white-000 fs-24 p-fixed top-24">
+					<i class="fas fa-arrow-left p-fixed left-24 cursor-pointer" id="backMenu"></i>
+					<i class="fas fa-camera p-fixed right-24" id="camera"></i>
+				</div>
+                <div class="video__options fc-white-000 fs-28 p-relative d-flex flex-col right-24 text-align">
+                    <i class="fas fa-ellipsis-h mb-28 cursor-pointer"></i>
+                    <i class="fas fa-thumbs-up mb-4 cursor-pointer" id="like"></i>
+                    <span class="mb-28" id="likes">999</span>
+                    <i class="fas fa-thumbs-down mb-4 cursor-pointer" id="dislike"></i>
+                    <span class="mb-28" id="dislikes">Nie podo...</span>
+                    <i class="fas fa-comment-alt mb-4 cursor-pointer" id="comment"></i>
+                    <span class="mb-28" id="commentsCounter">0</span>
+                    <i class="fas fa-share mb-4 cursor-pointer"></i>
+                    <span class="mb-28">Udostępnij</span>
+					<i class="fas fa-arrow-alt-circle-down mb-4 cursor-pointer" id="nextShort"></i>
+                    <span class="mb-28">Następny</span>
+                </div>
+                <div class="channel__options fc-white-000 fs-28 p-fixed d-flex flex-row left-16 gap-16" id="channelOp">
+                    <img src="https://avatars.githubusercontent.com/u/75419729?v=4" alt="" class="h-48 w-48 br-all-full cursor-pointer" id="avatar">
+                    <span class="fw-600" id="channel">Karol</span>
+                    <button class="bc-red-800 h-32 bw-0 br-all-6 fs-18 fw-600 fc-white-000 cursor-pointer" id="subscribe">SUBSKRYBUJ</button>
+                    <div class="h-48 w-48 br-all-6 bc-transparent bw-1 bs-solid bt-white-000 p-relative cursor-pointer" id="music"><img src="https://avatars.githubusercontent.com/u/75419729?v=4" alt="" class="h-10-10 br-all-6" id="musicLogo"><i class="fas fa-music p-absolute right-12 top-12 fs-24 fc-black-200"></i></div>
+                </div>
+                <div class="video__info__shorts fc-white-000 fs-28 p-relative d-flex flex-row left-16 w-256">
+                    <p id="title">Przykładowy film <span>#shorts</span></p>
+                </div>
+				<div class="comment__exit bc-transparent w-10-10 h-100vh"></div>
+				<div class="video__comments bc-black-900 h-7-10 w-10-10 p-fixed bottom-0" id="video__comments">
+					<div class="comments__top d-flex flex-row m-16 gap-16">
+						<p class="fc-white-000 fs-20 fw-400">Komentarze</p>
+						<span class="fw-400 fc-gray-400 fs-20" id="commentsCounter2">0</span>
+						<i class="fas fa-sliders-h fc-white-000 fs-20 right-16 p-absolute cursor-pointer" id="filter"></i>
+					</div>
+					<div class="comments__add d-flex flex-row mt-24 gap-16 w-10-10">
+						<img src="https://avatars.githubusercontent.com/u/75419729?v=4" alt="" class="h-48 br-all-full ml-16" id="commentsAvatar">
+						<input type="text" autocomplete="off" placeholder="Dodaj komentarz..." class="bc-transparent bw-0 fc-gray-400 fs-14" id="addCommentBtn">
+					</div>
+					<div class="comments__line mt-16 w-10-10 bc-gray-500 p-relative"></div>
+					<div class="comments__comment d-flex flex-row gap-16 bw-1 bp-top-hide bp-left-hide bp-right-hide bs-solid bt-gray-400 w-10-10 my-20 p-relative">
+						<img src="https://avatars.githubusercontent.com/u/75217728?v=1" alt="" class="h-48 br-all-full ml-16">
+						<div class="p-absolute ml-16 left-64"><p class="fs-14 fw-500 fc-gray-700">Marcin &#8226; 13 dni temu</p></div>
+						<div><span class="fs-16 fw-600 fc-white-000 p-absolute d-flex m-auto top-20 ml-16 left-64">Fajny film!</span></div>
+						<div class="comment__settings fc-white-000 d-flex flex-row w-10-10 p-relative top-7-10 right-16">
+							<i class="fas fa-thumbs-up cursor-pointer h-16"></i>
+							<i class="fas fa-thumbs-down cursor-pointer h-16"></i>
+							<i class="fas fa-comment cursor-pointer h-16"></i>
+							<i class="fas fa-ellipsis-v right-16 p-absolute cursor-pointer h-16" id="settings"></i>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</section>
+
+		<section class="yt__logging bc-black-400 w-10-10 h-100vh p-fixed top-0 left-0" id="logging__page">
+			<div class="content d-flex m-auto justify-content align-items text-align flex-col top-64 p-fixed left-0 right-0">
+				<div class="sign__up fs-24 fc-white-000 fw-600 w-10-10" id="sign__up__page">
+					<div class="sign__up__top d-flex flex-col gap-16 fs-20">
+						<h1>Witaj Użytkowniku!</h1>
+						<p class="fw-400">Stwórz swoje konto <span class="fs-20 fc-red-400">YouTube</span></p>
+					</div>
+					<div class="sign__up__form d-flex flex-col m-auto justify-content align-items flex-col gap-16 w-10-10 mt-48">
+							<input type="text" required autocomplete="off" placeholder="Nazwa" id="sign__name" class="w-8-10 bw-0 br-all-32 h-36">
+							<input type="email" required autocomplete="off" placeholder="Email" id="sign__email" class="w-8-10 bw-0 br-all-32 h-36">
+							<input type="password" required autocomplete="off" placeholder="Hasło" id="sign__pass" class="w-8-10 bw-0 br-all-32 h-36">
+							<div class="w-10-10 mt-16">
+								<button class="w-8-10 h-36 bw-0 br-all-full bc-red-400 fs-18 fc-white-000 fw-600 cursor-pointer" id="register__account">Zarejestruj</button>
+							</div>
+					</div>
+					<div class="sign__up__bottom p-fixed bottom-1-10 fs-12 left-0 right-0">
+						<h1 class="fw-400">Masz już konto? <a href="#"id="logg__now" class="fc-red-400">Zaloguj Się!</a></h1>
+					</div>
+				</div>
+				<div class="sign__in fs-24 fc-white-000 fw-600 w-10-10" id="sign__in__page">
+					<div class="sign__in__top d-flex flex-col gap-16 fs-20">
+						<h1>Witaj Spowrotem!</h1>
+						<p class="fw-400">Zaloguj się na konto <span class="fs-20 fc-red-400">YouTube</span></p>
+					</div>
+					<div class="sign__in__form d-flex flex-col m-auto justify-content align-items flex-col gap-16 w-10-10 mt-48">
+							<input type="email" required autocomplete="off" placeholder="Email" id="login__email" class="w-8-10 bw-0 br-all-32 h-36">
+							<input type="password" required autocomplete="off" placeholder="Hasło" id="login__pass" class="w-8-10 bw-0 br-all-32 h-36">
+							<div class="w-10-10 mt-16">
+								<button type="submit" class="w-8-10 h-36 bw-0 br-all-full bc-red-400 fs-18 fc-white-000 fw-600 cursor-pointer" id="login__account">Zaloguj</button>
+							</div>
+					</div>
+					<div class="sign__in__bottom p-fixed bottom-1-10 fs-12 left-0 right-0">
+						<h1 class="fw-400">Nie masz jeszcze konta? <a href="#" id="sign__now" class="fc-red-400">Zarejestruj się!</a></h1>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="yt__channel__manage h-100vh bc-black-400 p-fixed left-0 top-0 w-10-10" id="yt__channel__manage">
+			<div class="content">
+				<div class="top fs-32 fc-white-000 p-relative top-16 left-16">
+					<i class="fas fa-times cursor-pointer" id="closeChannelManage"></i>
+				</div>
+				<div class="top__channel p-relative top-32 d-flex align-items text-align flex-row gap-16">
+					<img class="h-48 br-all-full p-relative left-32" src="https://avatars.githubusercontent.com/u/75419729?v=4" alt="" id="yourChannelManage">
+					<h1 id="yourChannelNameManage" class="p-relative left-32">NaN</h1>
+					<i class="fas fa-chevron-right p-absolute right-64 fs-18 fc-gray-700 cursor-pointer" id="changeAccountManage"></i>
+				</div>
+				<div class="channel__manage__options p-relative fs-20 fw-600 fc-white-000 w-10-10 d-flex flex-col top-64 gap-8">
+					<div class="lines-div d-flex flex-col gap-0">
+						<p onclick="channelOpen__4();"><i class="fas fa-user"></i> Twój kanał</p>
+						<p><i class="fas fa-user-secret"></i> Włącz tryb incognito</p>
+						<p><i class="fas fa-user-plus"></i> Dodaj konto</p>
+					</div>
+					<div class="lines-div d-flex flex-col gap-0">
+						<p><i class="fab fa-youtube"></i> Pobierz YouTube Premium</p>
+						<p><i class="fas fa-dollar-sign"></i> Zakupy i subskrybcje</p>
+						<p><i class="fas fa-chart-bar"></i> Czas oglądania</p>
+						<p><i class="fas fa-shield-alt"></i> Twoje dane w YouTube</p>
+					</div>
+					<div class="lines-div d-flex flex-col gap-0">
+						<p><i class="fas fa-cog"></i> Ustawienia</p>
+						<p><i class="fas fa-question-circle"></i> Pomoc i opinie</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="watchVideo bc-black-400 w-10-10 h-100vh p-fixed top-0 left-0" id="watchVideo">
+			<div class="content">
+				<div class="watchVideo__top">
+					<video src="" autoplay controls class="w-10-10" id="watchVideo__video"></video>
+					<i class="fas fa-chevron-left p-fixed top-16 left-16 fs-24 fc-white-000 cursor-pointer" id="closeWatchVideo"></i>
+				</div>
+				<div class="watchVideo__info d-flex flex-col ml-16 mt-16 fs-18 fw-500 fc-white-000">
+					<h1 id="watchVideo__title">NaN</h1>
+					<p class="mt-8 fc-gray-400 fw-400 fs-16"><span id="watchVideo__view">0</span> wyświetleń &#8226; <span id="watchVideo__time">0 dni temu</span></p>
+				</div>
+				<div class="watchVideo__controls fs-28 fc-gray-700 mt-32 d-flex m-auto justify-content align-items text-align">
+					<div class="d-flex flex-col p-relative gap-8">
+						<i class="fas fa-thumbs-up" id="watchVideo__like"></i>
+						<span id="watchVideo__like__count">0</span>
+					</div>
+					<div class="d-flex flex-col p-relative gap-8">
+						<i class="fas fa-thumbs-down" id="watchVideo__dislike"></i>
+						<span>Nie podob..</span>
+					</div>
+					<div class="d-flex flex-col p-relative gap-8">
+						<i class="fas fa-share"></i>
+						<span>Udostępnij</span>
+					</div>
+					<div class="d-flex flex-col p-relative gap-8">
+						<i class="fas fa-download"></i>
+						<span>Pobierz</span>
+					</div>
+					<div class="d-flex flex-col p-relative gap-8">
+						<i class="fas fa-folder-plus"></i>
+						<span>Zapisz</span>
+					</div>
+				</div>
+				<div class="watchVideo__channel mt-36 w-10-10 d-flex bw-1 bs-solid bt-gray-000 bp-left-hide bp-right-hide">
+					<img src="https://avatars.githubusercontent.com/u/75419729?v=4" alt="" class="h-48 br-all-full ml-16" id="watchVideoAvatar">
+					<div class="ml-16">
+						<h1 class="fw-300" id="watchVideo__channel__sub">NaN</h1>
+						<p class="fc-gray-700"><span id="watchVideo__channel__sub__count">0</span> subskrybentów</p>
+					</div>
+					<div class="p-relative left-44">
+						<button class="h-48 bw-0 br-all-full fw-600 fs-18 bc-red-400 fc-white-000 cursor-pointer" id="watchVideo__sub">SUBSKRYBUJ</button>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="makeVideo w-10-10 h-100vh p-fixed top-0 left-0" id="makeVideo">
+			<div class="content">
+				<div class="makeVideo__popup__close w-10-10 h-100vh p-absolute top-0" onclick="closePopup();"></div>
+				<div class="makeVideo__popup w-10-10 p-absolute bottom-0 bc-black-900">
+					<div class="makeVideo__popup__top fs-18 fc-white-000 p-relative top-16 left-16">
+						<h1 class="fw-400">Utwórz <span class="fc-gray-700 fs-32 p-absolute right-32"><i class="fas fa-times cursor-pointer" onclick="closePopup();"></i></span></h1>
+					</div>
+					<div class="makeVideo__popup__items d-flex flex-col p-relative top-48">
+						<div class="d-flex flex-row align-items fs-18 fc-white-000 fw-300 gap-8">
+							<i class="fas fa-file-video ml-16 h-48 w-48 br-all-full bc-gray-000"></i>
+							<p>Utwórz film Short</p>
+						</div>
+						<div class="d-flex flex-row align-items fs-18 fc-white-000 fw-300 gap-8" onclick="uploadVideo();">
+							<i class="fas fa-upload ml-16 h-48 w-48 br-all-full bc-gray-000"></i>
+							<p>Prześlij film</p>
+						</div>
+						<div class="d-flex flex-row align-items fs-18 fc-white-000 fw-300 gap-8">
+							<i class="fas fa-earth-europe ml-16 h-48 w-48 br-all-full bc-gray-000"></i>
+							<p>Transmituj na żywo</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="uploadVideo bc-black-400 w-10-10 h-100vh p-fixed top-0 left-0" id="uploadVideo">
+			<div class="content">
+				<div class="upload__top p-relative top-16 left-16 fs-24 fw-500 fc-white-000">
+					<p><span class="mr-32 cursor-pointer" onclick="uploadVideoClose();"><i class="fas fa-arrow-left fs-24"></i></span> Dodaj szczegóły <span class="p-absolute right-32"><button class="bw-0 br-all-4 bc-blue-300 fs-16 fw-500 fc-black-200" onclick="uploadVideoBtn();">DALEJ</button></span></p>
+				</div>
+				<div class="upload__video__preview w-10-10 p-relative top-32 bc-black-200">
+					<video src="" autoplay controls class="w-10-10 h-10-10 p-relative" id="uploadVideo__src"></video>
+				</div>
+				<div class="upload__channel__info p-relative top-44 d-flex flex-row align-items text-align gap-16 fs-18 fc-white-000 fw-500 h-64 bw-1 bs-solid bt-gray-000 bp-left-hide bp-right-hide bp-top-hide">
+					<img src="https://avatars.githubusercontent.com/u/75419729?v=4" alt="" id="uploadVideo__avatar" class="h-48 br-all-full ml-16">
+					<p id="uploadVideo__channel__name">NaN</p>
+					<input type="text" autocomplete="off" placeholder="Wpisz URL filmu" class="bw-0 fs-18 w-128 h-32 br-all-full bc-black-900 p-absolute right-36" id="uploadVideo__url">
+				</div>
+				<div class="upload__title p-relative w-10-10 h-auto top-56 fc-gray-000 d-flex flex-col m-auto justify-content align-items">
+					<p class="p-absolute left-16">Tytuł</p>
+					<input type="text" autocomplete="off" placeholder="Utwórz tytuł" class="bw-0 h-32 bc-transparent fs-32 p-relative top-32" maxlength="30" id="titleVideo">
+					<span class="p-absolute right-16 top-64" id="titleLength">0</span>
+				</div>
+				<div class="upload__settings d-flex flex-col w-10-10 p-relative top-128 bw-1 bs-solid bt-gray-000 bp-bottom-hide bp-left-hide bp-right-hide">
+					<div class="mt-16 fs-18 fc-white-000">
+						<p><i class="fas fa-location-dot"></i> Lokalizacja</p>
+					</div>
+					<div class="fs-18 fc-white-000">
+						<p><i class="fas fa-plus"></i> Dodaj do playlist</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="channelDashboard bc-black-400 w-10-10 p-relative top-0 left-0" id="channelDashboard">
+			<div class="content">
+				<div class="dashboard__top d-flex m-auto align-items text-align flex-row fs-24 fc-white-000 fw-500 gap-16 p-relative top-16 left-16">
+					<i class="fas fa-arrow-left mr-8 cursor-pointer" onclick="closeChannelPage();"></i>
+					<p id="channels__db__name">NaN</p>
+					<div class="p-absolute right-32 d-flex flex-row gap-32">
+						<i class="fas fa-tv"></i>
+						<i class="fas fa-search"></i>
+						<i class="fas fa-ellipsis-v"></i>
+					</div>
+				</div>
+				<div class="dashboard__selection w-10-10 p-relative top-40 d-flex flex-row">
+					<p class="cursor-pointer active">GŁÓWNA</p>
+					<p class="cursor-pointer">WIDEO</p>
+					<p class="cursor-pointer">PLAYLISTY</p>
+					<p class="cursor-pointer">SPOŁECZNOŚĆ</p>
+					<p class="cursor-pointer">KANAŁY</p>
+					<p class="cursor-pointer">INFORMACJE</p>
+				</div>
+				<div class="dashboard__banner w-10-10 h-128 p-relative">
+					<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/A_black_image.jpg/320px-A_black_image.jpg" alt="" class="w-10-10 h-10-10" id="channels__db__banner">
+				</div>
+				<div class="dashboard__info w-10-10 d-flex m-auto justify-content align-items text-align flex-col p-relative top-64">
+					<img src="https://avatars.githubusercontent.com/u/75419729?v=4" alt="" class="br-all-full" id="channels__db__avatar">
+					<p class="fs-24 fw-500 fc-white-000 mt-16" id="channels__db__name__2">NaN</p>
+					<p class="fs-16 fw-200 fc-white-000"><span class="fs-16 fw-200 fc-white-000" id="channels__db__name__3">@NaN</span> &#8226; <span class="fs-16 fw-200 fc-white-000" id="channels__db__subs">0</span> subskrybentów &#8226; <span class="fs-16 fw-200 fc-white-000" id="channels__db__videos__count">Brak filmów</span></p>
+					<p class="fs-16 fw-300 fc-gray-700 mt-16">Więcej informacji o tym kanale <span class="ml-8"><i class="fas fa-chevron-right"></i></span></p>
+				</div>
+				<div class="dashboard__buttons d-none gap-16 d-flex flex-row m-auto justify-content align-items text-align p-relative">
+					<button onclick="uploadVideo__channelPage();">Zarządzaj filmami</button>
+					<button><i class="fas fa-chart-column"></i></button>
+					<button onclick="editChannel();"><i class="fas fa-pencil"></i></button>
+				</div>
+				<div class="dashboard__buttons__user d-flex m-auto justify-content align-items text-align p-relative d-none">
+					<button onclick="channelsDbSub();" id="channels__db__subscribe">SUBSKRYBUJ</button>
+				</div>
+				<div class="dashboard__videos p-relative top-128">
+					<div class="yt__video h-auto w-10-10" id="ytChannelVid">
+						<div id="thisImg">
+							<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/A_black_image.jpg/320px-A_black_image.jpg" alt="" class="w-10-10 cursor-pointer" id="channel__video__thumbnail">
+						</div>
+						<div class="video__time bc-black-100 br-all-2 w-36 fc-white-000 d-flex align-items justify-content p-relative">
+							<p id="channel__video__time">NaN</p>
+						</div>
+						<div class="video__info w-10-10 h-64 mt-16">
+							<img src="https://avatars.githubusercontent.com/u/75419729?v=4" alt="" class="h-56 br-all-full ml-16" id="channel__video__avatar">
+							<div><span class="fs-16 fw-600 fc-white-000 p-relative d-flex m-auto ml-16 left-64 bottom-56" id="channel__video__name">NaN</span></div>
+							<div class="yt__video__views p-relative ml-16 left-64"><p class="fs-14 fw-500 fc-gray-700" id="channel__video__views__1">NaN &#8226; 0 wyświetleń &#8226; NaN</p></div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</section>
+
+		<section class="editChannelPage bc-black-400 w-10-10 h-100vh p-fixed top-0 left-0" id="editChannelPage">
+			<div class="content">
+				<div class="top d-flex m-auto align-items text-align flex-row fs-24 fc-white-000 fw-500 gap-16 p-relative top-16 left-16">
+					<i class="fas fa-arrow-left mr-8 cursor-pointer" onclick="closeEditPage();"></i>
+					<p id="channels__db__name">Ustawienia kanału</p>
+					<div class="p-absolute right-32 d-flex flex-row gap-32">
+						<i class="fas fa-tv"></i>
+						<i class="fas fa-search"></i>
+						<i class="fas fa-ellipsis-v"></i>
+					</div>
+				</div>
+				<div class="banner w-10-10 h-128 p-relative">
+					<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/A_black_image.jpg/320px-A_black_image.jpg" alt="" class="w-10-10 h-10-10" id="channelBanner">
+					<img src="https://avatars.githubusercontent.com/u/75419729?v=4" alt="" class="avatar_banner br-all-full p-relative d-flex m-auto justify-content align-items left-0 right-0 cursor-pointer" onclick="editAvatar();">
+					<i class="banner_avatar_camera fas fa-camera d-flex m-auto justify-content align-items text-align left-0 right-0 p-absolute fs-24 fc-white-000 cursor-pointer" onclick="editAvatar();"></i>
+					<i class="banner_camera fas fa-camera d-flex m-auto justify-content align-items text-align right-24 p-absolute fs-24 fc-white-000 top-24 cursor-pointer" onclick="editBanner();"></i>
+				</div>
+				<div class="options d-flex flex-col ml-16 p-relative top-64 mr-16">
+					<h1 class="fs-18 fc-gray-700 fw-400">Nazwa</h1>
+					<div class="mt-12">
+						<p class="mb-24"><span class="fc-white-000 fs-24 fw-600" id="editChannelName">NaN</span> <span class="fs-20 p-absolute right-8 fc-gray-700 cursor-pointer" onclick="editName();"><i class="fas fa-pencil"></i></span></p>
+					</div>
+					<h1 class="fs-18 fc-gray-700 fw-400">Nick</h1>
+					<div class="mt-12">
+						<p class="mb-24"><span class="fc-white-000 fs-24 fw-600" id="editChannelNickName">@NaN</span></p>
+					</div>
+					<h1 class="fs-18 fc-gray-700 fw-400">Dodaj Opis <span class="ml-16"><i class="fas fa-pencil"></i></span></h1>
+					<div class="mt-32 w-10-10 d-flex m-auto h-2 justify-content align-items bc-gray-700"></div>
+				</div>
+				<div class="editOptions__box p-fixed top-0 bottom-0 left-0 right-0 w-9-10 bc-black-900 d-flex m-auto justify-content align-items text-align flex-col br-all-full">
+					<h1 class="p-relative top-8" id="editOptionsTitle">Wklej URL obrazu</h1>
+					<div class="w-10-10 d-flex flex-row justify-content align-items text-align m-auto">
+						<input type="text" autocomplete="off" placeholder="Wklej URL obrazu" class="bc-transparent bw-0 w-6-10" id="editChannelInput">
+						<button onclick="submitChanges();"><i class="fas fa-check"></i></button>
+					</div>
+				</div>
+			</div>
+		</section>
+		<script src="./src/scripts/channels__page.js"></script>
+		<script src="./src/scripts/change_mode.js"></script>
+		<script src="./src/scripts/script.js"></script>
+		<script src="./src/scripts/upload.js"></script>
+	</body>
+</html>
